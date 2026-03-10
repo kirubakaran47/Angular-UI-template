@@ -1,0 +1,82 @@
+.calendar-wrapper {
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+}
+
+/* Header styling */
+::ng-deep .fc .fc-toolbar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Custom Nav Buttons */
+::ng-deep .fc .fc-button-primary {
+    background-color: #2563eb !important;
+    border: none !important;
+    border-radius: 50% !important;
+    padding: 6px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 8px;
+}
+
+/* Grid layout (removing borders) */
+::ng-deep .fc th,
+::ng-deep .fc td {
+    border: none !important;
+}
+
+::ng-deep .fc .fc-scrollgrid {
+    border: none !important;
+}
+
+/* Day Header (SUN, MON...) */
+::ng-deep .fc .fc-col-header-cell-cushion {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-bottom: 15px;
+}
+
+/* Day Numbers */
+::ng-deep .fc .fc-daygrid-day-number {
+    color: #666;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    float: none;
+}
+
+/* Out of month dates */
+::ng-deep .fc .fc-day-other .fc-daygrid-day-number {
+    color: #ccc;
+}
+
+/* The Green Selection Circle */
+::ng-deep .selected-day {
+    background-color: transparent !important;
+}
+
+::ng-deep .selected-day .fc-daygrid-day-number {
+    background-color: #7ca933;
+    color: white !important;
+    border-radius: 50%;
+    display: inline-block;
+    width: 35px;
+    /* height: 35px;
+  line-height: 35px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.calendar-wrapper{margin-bottom: 10px;}
+button.fc-next-button.fc-button.fc-button-primary {
+    margin: 0px 8px;
+}

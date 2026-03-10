@@ -1,0 +1,23 @@
+<div class="main-body-content">
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1 main_container" [class.full-view]="isFullView"
+            *ngIf="templateAuthView == false">
+            <app-sidebar #sidebar></app-sidebar>
+            <div class="main-content" [class.sidebar-collapsed]="sidebar.isCollapsed">
+                <section class="section">
+                    <div class="content-page">
+                        <app-navbar (sidebarToggle)="sidebar.toggleSidebar()"
+                            (fullViewToggle)="toggleFullView($event)"></app-navbar>
+                        <router-outlet (activate)="onActivate($event)"></router-outlet>
+                        <footer class="footer">
+                            <p>Copyright © 2026 Project Develop by Kiruba</p>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="main-body-auth" *ngIf="templateAuthView == true">
+            <router-outlet (activate)="onActivate($event)"></router-outlet>
+        </div>
+    </div>
+</div>

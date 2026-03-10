@@ -1,0 +1,63 @@
+<div class="left side-menu" [class.sidebar-collapsed]="isCollapsed">
+  <button type="button" (click)="toggleMobileMenu()"
+    class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+    x
+  </button>
+  <div class="sidebar-section">
+    <div class="sidebar-inner niceScrollleft" tabindex="5000">
+      <div class="topbar-left">
+
+        <div class="text-center">
+          <a class="logo">
+            <img src="assets/img/favicon3.png" alt class="logo-large">
+          </a>
+          <a class="menu-sidebar-logo">
+            <img src="assets/img/favicon3.png" alt class="logo-large">
+          </a>
+          <span>OIS TASK</span>
+        </div>
+      </div>
+      <div class="sidebar-card-section">
+
+      
+      <div id="sidebar-menu" class="active">
+        <ul>
+          <li>
+            <a [routerLink]="['/dashboard']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+              class="waves-effect" data-title="Dashboard">
+              <i class="fas fa-home"></i>
+              <span class="menu-label"> Dashboard </span>
+            </a>
+            <ul class="menu-sidebar-item">
+              <li><a [routerLink]="['/dashboard']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                  class="waves-effect">Dashboard</a></li>
+            </ul>
+          </li>
+          <li>
+            <a [routerLink]="['/settings']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+              class="waves-effect">
+              <i class="fas fa-gear"></i>
+              <span> Settings </span>
+            </a>
+            <ul class="menu-sidebar-item">
+              <li><a [routerLink]="['/settings']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                  class="waves-effect"> Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <div class="sidebar-card">
+        <div class="card-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="card-content">
+          <h5>Thoughts Time</h5>
+          <p>We don't have any notice for you, till then you can share your thoughts with your peers.</p>
+          <button class="btn-message">Write a message</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

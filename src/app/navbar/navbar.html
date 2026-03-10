@@ -1,0 +1,60 @@
+<nav>
+    <div class="navbar-custom">
+        <ul class="list-inline mb-0">
+            <li class="float-left">
+                <button (click)="toggleMobileMenu()" class="button-menu-mobile open-left waves-light waves-effect">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="mobile-responsive">
+                    <div class="" (click)="toggleSidebar()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div (click)="toggleFullView()" class="waves-light waves-effect">
+                        <i class="fa" [ngClass]="isFullView ? 'fa-compress' : 'fa-expand'"></i>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-inline-item dropdown notification-list">
+                <div class="dropdown-list">
+                    <div class="select-wrapper">
+                        <i class="fa fa-building"></i>
+
+                        <select [(ngModel)]="selectedCompany" (ngModelChange)="onChange($event)">
+                            <option value="" disabled>Select Company</option>
+
+                            <option *ngFor="let company of companies" [value]="company">
+                                {{ company }}
+                            </option>
+                        </select>
+                    </div>
+                    <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="false" aria-expanded="false">
+                        <div class="user-panel">
+                            <img [src]="selectedUser?.profile_image_url || 'assets/img/user.jpg'" alt="user"
+                                class="rounded-circle">
+                            <div class="navbar-user-details">
+                                <p>Joseph Vijay D <span><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span></p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                        <div class="dropdown-item noti-title">
+                            <h5>Welcome</h5>
+                        </div>
+                        <a class="dropdown-item" href="javascript:void(0)"><i
+                                class="mdi mdi-account-circle m-r-5 text-muted"></i>
+                            Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0)" (click)="logout()"><i
+                                class="mdi mdi-logout m-r-5 text-muted"></i>
+                            Logout</a>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,43 @@
+.header {
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    position: relative;
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+
+.header h4 span {
+    color: #3981d4;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-details {
+    padding: 0px 20px;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+}
+
+span.date {
+    color: #9f9d9d;
+}
+.grid{margin: 20px 0px;}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+    .user-profile img {
+        width: 40px;
+        height: 40px;
+    }
+    .header h4{font-size: 14px;}
+    .user-details{min-height: auto;}
+}

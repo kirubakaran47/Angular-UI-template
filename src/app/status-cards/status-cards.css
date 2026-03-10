@@ -1,0 +1,187 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.left p {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.progress {
+  background-color: transparent;
+}
+
+.card {
+  margin-bottom: 5px;
+}
+
+.action {
+  font-size: 13px;
+  color: #4f46e5;
+  cursor: pointer;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.green {
+  background: #e7f8ef;
+}
+
+.orange {
+  background: #fff2e6;
+}
+
+.blue {
+  background: #eef2ff;
+}
+
+.purple {
+  background: #f3e8ff;
+}
+
+.indigo {
+  background: #eef2ff;
+}
+
+.gray {
+  background: #f1f5f9;
+}
+
+.right h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #4f46e5;
+  background: #fff;
+  color: #4f46e5;
+  font-size: 12px;
+}
+
+.progress {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+
+svg {
+  width: 42px;
+  height: 42px;
+}
+
+.bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3;
+}
+
+.meter {
+  fill: none;
+  stroke: #f97316;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.card:nth-child(3) .meter {
+  stroke: #3c85fc;
+}
+
+.progress span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+}
+
+/* Weekly card */
+.weekly {
+  background: #4f46e5;
+  color: #fff;
+  flex-direction: column;
+}
+
+.weekly button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  margin-top: 0;
+}
+
+.top-section,
+.bottom-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-section button {
+  color: #239f94;
+  font-weight: 500;
+  border-color: #239f94;
+  border-radius: 5px;
+}
+
+.card.weekly h4{
+  font-size: 18px;
+  margin: 0 0 8px;
+  font-weight: 400;
+}
+.card.weekly{margin-bottom: 10px;}
+span.action {
+  background-color: transparent;
+  font-weight: 500;
+}
+
+span.action.green {
+  color: #239f94;
+}
+
+span.action.orange {
+  color: #ec651d;
+}
+
+span.action.blue {
+  color: #3c85fc;
+}
+
+span.action.purple {
+  color: #b66ef6;
+}
+
+span.action.indigo {
+  color: #7469eb;
+}
+
+span.action.gray {
+  color: #526072;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 0px !important;
+  }
+}

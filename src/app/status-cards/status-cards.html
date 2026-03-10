@@ -1,0 +1,37 @@
+<div class="stats-grid">
+    <div class="card" *ngFor="let item of stats">
+        <div class="top-section">
+            <div class="icon" [class]="item.color">{{ item.icon }}</div>
+            <h3>{{ item.value }}</h3>
+        
+        </div>
+
+        <div class="bottom-section">
+            <div class="left">
+                    <p>{{ item.label }}</p>
+            <span  [class]="item.color" class="action">{{ item.action }}</span>
+            </div>
+         
+            <div class="progress" *ngIf="item.progress">
+                <svg viewBox="0 0 36 36">
+                    <path class="bg" d="M18 2.0845
+               a 15.9155 15.9155 0 0 1 0 31.831
+               a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="meter" [attr.stroke-dasharray]="item.progress + ', 100'" d="M18 2.0845
+               a 15.9155 15.9155 0 0 1 0 31.831
+               a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <span>{{ item.progress }}%</span>
+            </div>
+
+            <button *ngIf="item.extra">{{ item.extra }}</button>
+        </div>
+    </div>
+
+    <!-- Weekly Report -->
+    <div class="card weekly">
+        <h4>Weekly Report</h4>
+        <p>You have tracked 60 hours across<br />5 active projects this week</p>
+        <button>View & Download</button>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+ul.list-inline.mb-0 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-panel {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.dropdown-toggle .navbar-user-details p {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.dropdown-toggle .navbar-user-details {
+  padding-left: 10px;
+}
+
+.dropdown-toggle .navbar-user-details p strong {
+  font-size: 12px;
+  width: 40px;
+  display: inline-block;
+}
+
+.dropdown-toggle .navbar-user-details p span {
+  padding: 0px 5px;
+}
+
+.dropdown a:focus {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+  button.button-menu-mobile {
+    display: none;
+  }
+}
+
+.navbar-custom i.fa {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.navbar-custom {
+  padding: 0px 10px;
+}
+
+.mobile-responsive {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-responsive i {
+  cursor: pointer;
+}
+
+.navbar-user-details {
+  display: block;
+}
+
+.company-dropdown {
+  list-style: none;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select-wrapper i {
+  position: absolute;
+  left: 5px;
+  color: #666;
+}
+
+select {
+  padding: 8px 10px 8px 35px;
+  /* space for icon */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  width: auto;
+}
+
+.dropdown-list {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  button.button-menu-mobile.open-left.waves-light.waves-effect {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button.button-menu-mobile.open-left.waves-light.waves-effect i {
+    font-size: 18px;
+  }
+
+  .mobile-responsive {
+    display: none;
+  }
+
+  .navbar-user-details {
+    display: none;
+  }
+}
